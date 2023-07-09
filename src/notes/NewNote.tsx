@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { TNote } from "../type";
-import dexie from "../dexie";
+import db from "../db";
 
 /**
  * New note component
@@ -12,7 +12,9 @@ const NewNote = () => {
   /**
    * Handle submit
    */
-  const handleSubmit = async (ev: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (
+    ev: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     ev.preventDefault();
 
     const note: TNote = {
@@ -21,7 +23,7 @@ const NewNote = () => {
       content: "",
     };
 
-    await dexie.notes.add(note);
+    await db.notes.add(note);
     setTitle("");
   };
 

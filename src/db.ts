@@ -18,12 +18,12 @@ class DexieDb extends Dexie {
 /**
  * Dexie instance
  */
-const dexie = new DexieDb();
-export default dexie;
+const db = new DexieDb();
+export default db;
 
 /**
  * Clear all models
  */
 export const dexieClear = (): void => {
-  dexie.notes.clear();
+  db.notes.clear();
 };

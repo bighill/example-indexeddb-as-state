@@ -1,11 +1,15 @@
-import dexie from "../dexie";
+import { IndexableType, PromiseExtended } from "dexie";
+
+import db from "../db";
 import { TNote } from "../type";
+
+type UseUpdateNoteReturn = (note: TNote) => PromiseExtended<IndexableType>;
 
 /**
  * Update note
  */
-const useUpdateNote = () => {
-  const updateNote = (note: TNote) => dexie.notes.put(note);
+const useUpdateNote = (): UseUpdateNoteReturn => {
+  const updateNote = (note: TNote) => db.notes.put(note);
   return updateNote;
 };
 

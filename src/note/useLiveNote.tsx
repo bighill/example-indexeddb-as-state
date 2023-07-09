@@ -1,12 +1,13 @@
-import dexie from "../dexie";
-import { TNote } from "../type";
 import { useLiveQuery } from "dexie-react-hooks";
+
+import db from "../db";
+import { TNote } from "../type";
 
 /**
  * Get note and listen to changes
  */
 const useLiveNote = (id: string | undefined): TNote | undefined => {
-  const note = useLiveQuery(() => dexie.notes.get(id || ""), [id]);
+  const note = useLiveQuery(() => db.notes.get(id || ""), [id]);
   return note;
 };
 

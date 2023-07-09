@@ -41,6 +41,12 @@ h3 {
   margin-top: 0;
 }
 
+input,
+textarea {
+  padding: 0.5em;
+  border: none;
+}
+
 small {
   display: block;
 }
@@ -84,16 +90,4 @@ button:hover {
 
 a.list {
   margin: 1rem 1rem 0 0;
-}
-
-/*
-
-  Input
-
-*/
-
-input,
-textarea {
-  padding: 0.5em;
-  border: none;
 }

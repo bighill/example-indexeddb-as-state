@@ -1,12 +1,13 @@
 import { useLiveQuery } from "dexie-react-hooks";
 
-import dexie from "../dexie";
+import db from "../db";
+import { TNote } from "../type";
 
 /**
  * Get all notes and listen to changes
  */
-const useLiveNotes = () => {
-  const notes = useLiveQuery(() => dexie.notes.toArray(), []);
+const useLiveNotes = (): TNote[] => {
+  const notes = useLiveQuery(() => db.notes.toArray(), []);
   return notes || [];
 };
 

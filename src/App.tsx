@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { dexieClear } from "./db";
 import Notes from "./notes/Notes";
-import Note from "./note/Note";
 import NewNote from "./notes/NewNote";
+import Note from "./note/Note";
 
 function App() {
   return (
@@ -16,7 +18,12 @@ function App() {
           path="/"
           element={
             <>
-              {/* TODO add btn to clear db */}
+              <button onClick={dexieClear}>Clear DB</button>
+
+              <br />
+              <br />
+              <br />
+
               <NewNote />
               <Notes />
             </>

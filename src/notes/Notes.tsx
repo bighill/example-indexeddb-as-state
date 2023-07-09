@@ -8,6 +8,9 @@ import useLiveNotes from "./useLiveNotes";
 const Notes = () => {
   const notes = useLiveNotes();
 
+  /**
+   * Render
+   */
   return (
     <div>
       {notes?.map((note) => (
