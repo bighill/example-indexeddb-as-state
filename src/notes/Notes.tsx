@@ -11,9 +11,9 @@ const Notes = () => {
   return (
     <div>
       {notes?.map((note) => (
-        <div key={note.id}>
-          <Link to={`/note/${note.id}`}>{note.title}</Link>
-        </div>
+        <Link key={note.id} to={`/note/${note.id}`} className="list">
+          {note.title}
+        </Link>
       ))}
     </div>
   );

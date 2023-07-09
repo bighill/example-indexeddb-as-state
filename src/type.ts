@@ -1,5 +1,5 @@
 export interface TNote {
-  id: number;
+  id: string;
   title: string;
   content: string;
 }

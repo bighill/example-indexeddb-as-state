@@ -16,7 +16,7 @@ const NewNote = () => {
     ev.preventDefault();
 
     const note: TNote = {
-      id: Date.now(),
+      id: Date.now().toString(),
       title: title,
       content: "",
     };

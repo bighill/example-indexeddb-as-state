@@ -6,6 +6,8 @@ import NewNote from "./notes/NewNote";
 function App() {
   return (
     <BrowserRouter>
+      <h1>Example IndexedDb as state</h1>
+
       <Routes>
         {/* 
           Home page, notes list 
@@ -14,6 +16,7 @@ function App() {
           path="/"
           element={
             <>
+              {/* TODO add btn to clear db */}
               <NewNote />
               <Notes />
             </>

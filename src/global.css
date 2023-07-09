@@ -27,6 +27,10 @@ body {
   color: var(--color-fg);
 }
 
+body {
+  margin: 1rem;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -35,6 +39,10 @@ h1,
 h2,
 h3 {
   margin-top: 0;
+}
+
+small {
+  display: block;
 }
 
 /*
@@ -53,17 +61,39 @@ button {
 
 /*
 
-  Misc
+  Button
 
 */
 
 a,
 a:visited,
-a:focus {
+a:focus,
+button {
+  display: inline-block;
   text-decoration: none;
+  background: var(--color-bg);
   color: var(--color-fg);
+  border: 1px dotted var(--color-fg);
+  padding: 0.5rem 1rem;
 }
 
-a:hover {
+a:hover,
+button:hover {
   text-decoration: underline;
+}
+
+a.list {
+  margin: 1rem 1rem 0 0;
+}
+
+/*
+
+  Input
+
+*/
+
+input,
+textarea {
+  padding: 0.5em;
+  border: none;
 }
